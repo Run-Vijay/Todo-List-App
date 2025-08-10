@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            font-family: "Poppins", sans-serif;
+        }
+        /* navbar */
+        .navbar {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+        .navbar h1{
+            margin-left: 20px;
+        }
+        /* hero section */
+
+        #Hero-section {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            margin-top: 100px;
+            min-height: 500px;
+            width: 30%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border-radius: 20px;
+
+            /* gap: 10px; */
+        }
+
+        .heading {
+            height: 60px;
+            background-color: #d5d5d5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .content {
+            height: calc(100% - 60px);
+
+            /* background-color: blue; */
+        }
+
+        #list-container {
+            margin: 10px 0px 0px 30px;
+        }
+
+        #list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            list-style: decimal;
+            margin-bottom: 20px;
+        }
+
+        #list li {
+            padding: 5px;
+            /* background-color: aqua; */
+
+        }
+
+        .delbtn {
+            padding: 5px;
+        }
+
+        /* input .container */
+        #input-container{
+            /* background-color: red; */
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        #inp {
+            width: 70%;
+            border: 1px solid black;
+            border-radius: 20px 0px 0px 20px;
+            font-size: 1.5rem;
+            /* height: 100%; */
+        }
+        #btn, #clr{
+            width: 15%;
+            border: 1px solid black;
+        }
+        #clr{
+            border-radius: 0px 20px 20px 0px;
+            
+        }
+        @media only screen and (max-width: 1355px){
+            .container{
+                width: 90%;
+            }
+            #btn, #clr{
+                width: 17.5%;
+            }
+            #inp{
+                width: 65%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Todo-List</h1>
+        </nav>
+    </header>
+    <main>
+        <section id="Hero-section">
+            <div class="container">
+                <div class="heading">
+                    <h1>Todo-List</h1>
+                </div>
+                <div class="content">
+                    <div id="input-container">
+                        <input type="text" id="inp">
+                        <button type="submit" id="btn" onclick="addTodos()">Add Todo</button>
+                        <button id="clr">Clear</button>
+                    </div>
+                    <div id="list-container">
+                        <ul id="list">
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
